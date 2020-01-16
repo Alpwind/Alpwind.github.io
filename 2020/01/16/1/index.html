@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Hello My first blog; | Alpwind&#39;s dream house</title>
+    <title>IOS常用框架集成方式 | Alpwind&#39;s dream house</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="Junior student in SCUEC_CS_IST">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Hello My first blog; | Alpwind&#39;s dream house">
+    <meta name="twitter:title" content="IOS常用框架集成方式 | Alpwind&#39;s dream house">
     <meta name="twitter:description" content="Junior student in SCUEC_CS_IST">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hello My first blog; | Alpwind&#39;s dream house">
+    <meta property="og:title" content="IOS常用框架集成方式 | Alpwind&#39;s dream house">
     <meta property="og:description" content="Junior student in SCUEC_CS_IST">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="Alpwind&#39;s dream house" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com/2019/11/30/hello-world/"/>
+    <link rel="canonical" href="http://yoursite.com/2020/01/16/1/"/>
 
                  
 </head>
@@ -148,17 +148,43 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2019-11-30T06:41:32.064Z" class="post-list__meta--date date">2019-11-30</time> &#8226; <span class="post-meta__tags tags">于  </span>
+      <time datetime="2020-01-16T01:19:52.484Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-meta__tags tags">于  </span>
       <span class="page-pv">
        Read <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">Hello My first blog;</h1>
+    <h1 class="post-title">IOS常用框架集成方式</h1>
   </header>
 
   <section class="post">
-    <p>发这篇blog的目的就是为了测试~以后陆续更新alp的学习生活</p>
+    <p>系统提供的网络请求的方法不太友好，有太多重复的代码。</p>
+<p>Xcode工程两种模式<br>Project       workspace<br>workspace是一个工作区间，可以包含多个project。将多个project合成一个workspace可以合作开发。</p>
+<p>常用的代码管理方式：<br><strong>1.基于git的submodule</strong></p>
+<p><strong>2.cocoapods 最常用，中心化的管理，简单来说就是做两件事情，一是根据开发者写的podfile在服务器中（通常托管在github上）下载需要的code，然后打包成一个pods，最后将本地的project和pods生成一个workspace。</strong></p>
+<p><strong>3.carthage 将project打包成一个framework</strong></p>
+<p>三种方式的比较<br>subModule</p>
+<ul>
+<li>基于Git管理；使用简单；</li>
+<li>功能较少只能下载全部项目；</li>
+<li>debug方便</li>
+</ul>
+<p>CocoaPods</p>
+<ul>
+<li>Ruby语言；</li>
+<li>安装和使用；</li>
+<li>中心化的管理；</li>
+<li>生成workspace；</li>
+<li>debug方便；</li>
+</ul>
+<p>Carthage</p>
+<ul>
+<li>Swift语言；</li>
+<li>安装和使用；</li>
+<li>去中心化的管理；</li>
+<li>提供framework文件；</li>
+<li>debug不便；</li>
+</ul>
 
   </section>
 
@@ -170,19 +196,31 @@
                
             <div class="read-more-item">
                 <span class="read-more-item-dim">Newer Post</span>
-                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/1/" title="IOS常用框架集成方式">IOS常用框架集成方式</a></h2>
+                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/2/" title="列表数据加载、解析和展示的完整流程">列表数据加载、解析和展示的完整流程</a></h2>
                 <p class="excerpt">
                 
-                系统提供的网络请求的方法不太友好，有太多重复的代码。
-Xcode工程两种模式Project       workspaceworkspace是一个工作区间，可以包含多个project。将多个project合成一个workspace可以合作开发。
-常用的代码管理方式：1.基于git的submodule
+                1.通过网络接口加载数据（二进制流）2.使用NSJsonSerialization解析处理网络请求，将二进制数据转换成JSON类型3.数据Model化（JSON转Model），将NSDictionary转换成结构化的Model数据4.列表加载Model数组
+
                 &hellip;
                 </p>
-                <div class="post-list__meta"><time datetime="2020-01-16T01:19:52.484Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/1/">继续阅读</a></div>
+                <div class="post-list__meta"><time datetime="2020-01-16T01:35:42.140Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/2/">继续阅读</a></div>
                            
             </div>
         
         
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">Older Post</span>
+                <h2 class="post-list__post-title post-title"><a href="/2019/11/30/hello-world/" title="Hello My first blog;">Hello My first blog;</a></h2>
+                <p class="excerpt">
+                
+                发这篇blog的目的就是为了测试~以后陆续更新alp的学习生活
+
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2019-11-30T06:41:32.064Z" class="post-list__meta--date date">2019-11-30</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2019/11/30/hello-world/">继续阅读</a></div>
+                       
+            </div>
         
      
    

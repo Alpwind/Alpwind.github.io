@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Hello My first blog; | Alpwind&#39;s dream house</title>
+    <title>IOS沙盒机制 | Alpwind&#39;s dream house</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="Junior student in SCUEC_CS_IST">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Hello My first blog; | Alpwind&#39;s dream house">
+    <meta name="twitter:title" content="IOS沙盒机制 | Alpwind&#39;s dream house">
     <meta name="twitter:description" content="Junior student in SCUEC_CS_IST">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hello My first blog; | Alpwind&#39;s dream house">
+    <meta property="og:title" content="IOS沙盒机制 | Alpwind&#39;s dream house">
     <meta property="og:description" content="Junior student in SCUEC_CS_IST">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="Alpwind&#39;s dream house" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com/2019/11/30/hello-world/"/>
+    <link rel="canonical" href="http://yoursite.com/2020/01/16/4/"/>
 
                  
 </head>
@@ -148,17 +148,23 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2019-11-30T06:41:32.064Z" class="post-list__meta--date date">2019-11-30</time> &#8226; <span class="post-meta__tags tags">于  </span>
+      <time datetime="2020-01-16T01:40:38.831Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-meta__tags tags">于  </span>
       <span class="page-pv">
        Read <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">Hello My first blog;</h1>
+    <h1 class="post-title">IOS沙盒机制</h1>
   </header>
 
   <section class="post">
-    <p>发这篇blog的目的就是为了测试~以后陆续更新alp的学习生活</p>
+    <p>沙盒简单来说，每个app只能访问自己的文件夹，即自己沙盒中的文件。</p>
+<p>系统有两个文件夹<strong>Bundles</strong>和<strong>Datas</strong></p>
+<p>这两个文件夹下都有系统安装的每个app的文件夹</p>
+<p>Bundles/App1下存储的是app1的应用配置信息plist和二进制文件&amp;资源，通常是不需要访问的</p>
+<p>Datas/App1下存储的是app真正访问的资源和文件，app1只能取Datas/App1的数据而不能访问app2或是其他</p>
+<p>获取文件夹的地址<br>NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES)</p>
+<p><strong>fileManager</strong> <strong>fileHandle</strong>两个类用来管理文件和编辑文件。</p>
 
   </section>
 
@@ -170,19 +176,36 @@
                
             <div class="read-more-item">
                 <span class="read-more-item-dim">Newer Post</span>
-                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/1/" title="IOS常用框架集成方式">IOS常用框架集成方式</a></h2>
+                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/5/" title="NSCoder">NSCoder</a></h2>
                 <p class="excerpt">
                 
-                系统提供的网络请求的方法不太友好，有太多重复的代码。
-Xcode工程两种模式Project       workspaceworkspace是一个工作区间，可以包含多个project。将多个project合成一个workspace可以合作开发。
-常用的代码管理方式：1.基于git的submodule
+                
+归档（序列化）&amp;amp;解归档（反序列化） 
+
+提供简单的函数，在Object和二进制数据间进行转换（注：普通的字符串可以用编码的方式转换如下图所示 调用NSData类的方法 dataUsingEncoding 将abc编码成二进制文件存储在listData中）
+
+NSCoder是一个抽象类 具体
                 &hellip;
                 </p>
-                <div class="post-list__meta"><time datetime="2020-01-16T01:19:52.484Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/1/">继续阅读</a></div>
+                <div class="post-list__meta"><time datetime="2020-01-16T01:42:37.059Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/5/">继续阅读</a></div>
                            
             </div>
         
         
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">Older Post</span>
+                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/3/" title="NSURLSession基础原理、组织和使用">NSURLSession基础原理、组织和使用</a></h2>
+                <p class="excerpt">
+                
+                在浏览器中输入一个url发生了什么？
+在浏览器中输入一个URL，浏览器根据URL里面的地址以及参数向服务器发送一个请求，得到HTML数据，浏览器再将之通过CSS渲染，JS解析成一个完整的页面。
+URL本身是一个字符串，系统提供的函数可以将之封装成一个NSURL类，可以方便的提取请求参数等，可以不必使
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2020-01-16T01:37:42.382Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/3/">继续阅读</a></div>
+                       
+            </div>
         
      
    

@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Hello My first blog; | Alpwind&#39;s dream house</title>
+    <title>NSCoder | Alpwind&#39;s dream house</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="Junior student in SCUEC_CS_IST">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Hello My first blog; | Alpwind&#39;s dream house">
+    <meta name="twitter:title" content="NSCoder | Alpwind&#39;s dream house">
     <meta name="twitter:description" content="Junior student in SCUEC_CS_IST">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hello My first blog; | Alpwind&#39;s dream house">
+    <meta property="og:title" content="NSCoder | Alpwind&#39;s dream house">
     <meta property="og:description" content="Junior student in SCUEC_CS_IST">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="Alpwind&#39;s dream house" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com/2019/11/30/hello-world/"/>
+    <link rel="canonical" href="http://yoursite.com/2020/01/16/5/"/>
 
                  
 </head>
@@ -148,17 +148,26 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2019-11-30T06:41:32.064Z" class="post-list__meta--date date">2019-11-30</time> &#8226; <span class="post-meta__tags tags">于  </span>
+      <time datetime="2020-01-16T01:42:37.059Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-meta__tags tags">于  </span>
       <span class="page-pv">
        Read <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">Hello My first blog;</h1>
+    <h1 class="post-title">NSCoder</h1>
   </header>
 
   <section class="post">
-    <p>发这篇blog的目的就是为了测试~以后陆续更新alp的学习生活</p>
+    <ul>
+<li><p>归档（序列化）&amp;解归档（反序列化） </p>
+</li>
+<li><p>提供简单的函数，在Object和二进制数据间进行转换（注：普通的字符串可以用编码的方式转换如下图所示 调用NSData类的方法 dataUsingEncoding 将abc编码成二进制文件存储在listData中）</p>
+</li>
+<li><p>NSCoder是一个抽象类 具体的功能需要子类实现</p>
+</li>
+</ul>
+<p>当一个对象Object需要实现序列化或者反序列化的时候，需要在对象里面实现NSCoding的协议，也就是两个方法encodeWithCoder和initWithCoder 说明各个属性的key，相比顺序转换，<strong>兼容性更好</strong></p>
+<p>NSSecureCoding 是 NSCoding的一个子类。</p>
 
   </section>
 
@@ -170,19 +179,40 @@
                
             <div class="read-more-item">
                 <span class="read-more-item-dim">Newer Post</span>
-                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/1/" title="IOS常用框架集成方式">IOS常用框架集成方式</a></h2>
+                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/6/" title="开源存储方案对比与分析">开源存储方案对比与分析</a></h2>
                 <p class="excerpt">
                 
-                系统提供的网络请求的方法不太友好，有太多重复的代码。
-Xcode工程两种模式Project       workspaceworkspace是一个工作区间，可以包含多个project。将多个project合成一个workspace可以合作开发。
-常用的代码管理方式：1.基于git的submodule
+                因为系统提供的API序列化和反序列化对象比较复杂，需要实现NSCoding的协议
+NSUserDefault提供简单的key-value的存储 很像一个数据库
+
+单例，存储轻量级的数据
+单例，存储轻量级的数据
+升级安装后还可以继续使用
+文件存储在/Library/preferences下
+支持基本的
                 &hellip;
                 </p>
-                <div class="post-list__meta"><time datetime="2020-01-16T01:19:52.484Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/1/">继续阅读</a></div>
+                <div class="post-list__meta"><time datetime="2020-01-16T01:45:59.380Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/6/">继续阅读</a></div>
                            
             </div>
         
         
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">Older Post</span>
+                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/4/" title="IOS沙盒机制">IOS沙盒机制</a></h2>
+                <p class="excerpt">
+                
+                沙盒简单来说，每个app只能访问自己的文件夹，即自己沙盒中的文件。
+系统有两个文件夹Bundles和Datas
+这两个文件夹下都有系统安装的每个app的文件夹
+Bundles/App1下存储的是app1的应用配置信息plist和二进制文件&amp;amp;资源，通常是不需要访问的
+Datas/App1下存储
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2020-01-16T01:40:38.831Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/4/">继续阅读</a></div>
+                       
+            </div>
         
      
    

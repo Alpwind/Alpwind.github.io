@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Hello My first blog; | Alpwind&#39;s dream house</title>
+    <title>开源存储方案对比与分析 | Alpwind&#39;s dream house</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="Junior student in SCUEC_CS_IST">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Hello My first blog; | Alpwind&#39;s dream house">
+    <meta name="twitter:title" content="开源存储方案对比与分析 | Alpwind&#39;s dream house">
     <meta name="twitter:description" content="Junior student in SCUEC_CS_IST">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hello My first blog; | Alpwind&#39;s dream house">
+    <meta property="og:title" content="开源存储方案对比与分析 | Alpwind&#39;s dream house">
     <meta property="og:description" content="Junior student in SCUEC_CS_IST">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="Alpwind&#39;s dream house" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com/2019/11/30/hello-world/"/>
+    <link rel="canonical" href="http://yoursite.com/2020/01/16/6/"/>
 
                  
 </head>
@@ -148,17 +148,31 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2019-11-30T06:41:32.064Z" class="post-list__meta--date date">2019-11-30</time> &#8226; <span class="post-meta__tags tags">于  </span>
+      <time datetime="2020-01-16T01:45:59.380Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-meta__tags tags">于  </span>
       <span class="page-pv">
        Read <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">Hello My first blog;</h1>
+    <h1 class="post-title">开源存储方案对比与分析</h1>
   </header>
 
   <section class="post">
-    <p>发这篇blog的目的就是为了测试~以后陆续更新alp的学习生活</p>
+    <p>因为系统提供的API序列化和反序列化对象比较复杂，需要实现NSCoding的协议</p>
+<p>NSUserDefault<br>提供简单的key-value的存储 <strong>很像一个数据库</strong></p>
+<ul>
+<li>单例，存储轻量级的数据</li>
+<li>单例，存储轻量级的数据</li>
+<li>升级安装后还可以继续使用</li>
+<li>文件存储在/Library/preferences下</li>
+<li>支持基本的数据类型</li>
+<li>保存Integer Float Double Bool</li>
+<li>保存NSArray NSData NSString</li>
+<li>复杂Model需要转化成NSData</li>
+</ul>
+<h3 id="存储分类"><a href="#存储分类" class="headerlink" title="存储分类"></a>存储分类</h3><p><strong>系统级存储</strong><br>NSUserDefault<br>keychain<br>通过NSKeyedArchiver归档后（对象转二进制）存文件<br>数据库CoreData</p>
+<p><strong>Key-Value类型</strong><br>LevelDB/MMKV/Realm</p>
+<p><strong>关系数据库类型</strong><br>SQLite/FMDB/WCDB</p>
 
   </section>
 
@@ -170,19 +184,50 @@
                
             <div class="read-more-item">
                 <span class="read-more-item-dim">Newer Post</span>
-                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/1/" title="IOS常用框架集成方式">IOS常用框架集成方式</a></h2>
+                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/7/" title="多线程基础">多线程基础</a></h2>
                 <p class="excerpt">
                 
-                系统提供的网络请求的方法不太友好，有太多重复的代码。
-Xcode工程两种模式Project       workspaceworkspace是一个工作区间，可以包含多个project。将多个project合成一个workspace可以合作开发。
-常用的代码管理方式：1.基于git的submodule
+                
+iOS中的进程&amp;amp;线程
+
+
+通常来说一个App就是一个进程
+iOS开发中较少的运用进程间的通信（XPC），绝大部分使用线程
+
+
+iOS中的主线程/非主线程
+
+
+为了保证流畅体验及线程安全，所有UI操作全都放到主线程中
+影响UI体验（较长时间）的操作尽量放到非主线程
+同步&amp;amp;异步
+
+
+i
                 &hellip;
                 </p>
-                <div class="post-list__meta"><time datetime="2020-01-16T01:19:52.484Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/1/">继续阅读</a></div>
+                <div class="post-list__meta"><time datetime="2020-01-16T01:54:47.046Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/7/">继续阅读</a></div>
                            
             </div>
         
         
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">Older Post</span>
+                <h2 class="post-list__post-title post-title"><a href="/2020/01/16/5/" title="NSCoder">NSCoder</a></h2>
+                <p class="excerpt">
+                
+                
+归档（序列化）&amp;amp;解归档（反序列化） 
+
+提供简单的函数，在Object和二进制数据间进行转换（注：普通的字符串可以用编码的方式转换如下图所示 调用NSData类的方法 dataUsingEncoding 将abc编码成二进制文件存储在listData中）
+
+NSCoder是一个抽象类 具体
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2020-01-16T01:42:37.059Z" class="post-list__meta--date date">2020-01-16</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2020/01/16/5/">继续阅读</a></div>
+                       
+            </div>
         
      
    
